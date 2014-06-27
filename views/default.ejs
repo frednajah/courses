@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include partials/page/head.ejs %>
+  </head>
+  <body class="<%= classname %>" >
+	<div class="container">
+		<% include partials/page/header.ejs %>
+  
+	
+		<H1><%= title %></H1>
+
+		<p>This is coming from my default template</p>
+	
+		<% if (typeof(users) !=='undefined') { %>
+	<ul>
+	
+		<% for(var i=0; i<users.length; i++) { %>
+				<li> <%= users[i] %> </li>
+		<% } %>
+
+	</ul>
+	
+	<% } %>
+    
+	 
+	
+	 <% include partials/page/footer.ejs %>
+	 </div>
+	 <% include partials/page/jsdefaults.ejs %>
+	
+
+ </body>
+</html>
